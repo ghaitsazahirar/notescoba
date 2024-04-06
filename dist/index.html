@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Notes App</title>
+    <script defer="defer" src="bundle.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar"><span class="navbar-font">Notes App</span></nav>
+    </header>
+    <main class="container">
+      <search-bar></search-bar>
+      <div class="row-contain">
+        <div class="row">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Notes Here</h5>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="inputNotesNum">Number Notes</label>
+                <input id="inputNotesNum" type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="inputNotesTitle">Title</label>
+                <input id="inputNotesTitle" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="inputNotesBody" class="inputNotesBody"
+                  >Description</label
+                >
+                <input id="inputNotesBody" class="form-control" />
+              </div>
+              <div class="form-group">
+                <button id="buttonSave" class="btn btn-success">Save</button>
+                <button id="buttonUpdate" class="btn btn-primary">
+                  Archived
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <note-list id="note-list" class="note-list"></note-list>
+      <note-item id="note-item" class="note-item"></note-item>
+    </main>
+  </body>
+</html>

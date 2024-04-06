@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+.contain-grid {
+  font-family: "Quicksand", sans-serif;
+}
+.container {
+  padding: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.contain-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 2fr; /* Mengubah grid-template-rows */
+    grid-template-areas:
+      "header  header  header  header"
+      "main     main    main   main";
+  }
+  
+
+header {
+  grid-area: header;
+}
+
+.navbar-font{
+    font-size: 3em;
+}
+
+main {
+  grid-area: main;
+}
+
+button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge black;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 10em;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: white;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: white;
+  transition: 0.5s;
+}
+
+button:hover::before,
+button:hover::after {
+  transform: scale(0);
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px black;
+}
